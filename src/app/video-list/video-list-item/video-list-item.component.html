@@ -1,3 +1,7 @@
 <p>
-  {{content.title}}
+  <b>{{content.title}}</b> - {{content.description}}
 </p>
+<img
+  *ngIf="content.thumbnails.thumbnail && content.thumbnails.thumbnail.length > 0"
+  [src]="content.thumbnails.thumbnail[0].value"
+/>
