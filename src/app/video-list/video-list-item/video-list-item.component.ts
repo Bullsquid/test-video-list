@@ -13,7 +13,6 @@ export class VideoListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.content);
   }
 
 }

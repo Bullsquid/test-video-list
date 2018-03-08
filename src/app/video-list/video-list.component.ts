@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ApiService} from '../api.service';
-import {VideoListItem} from '../models/video-list-item';
+import { ApiService } from '../api.service';
+import { VideoListItem } from '../models/video-list-item';
 
 @Component({
   selector: 'app-video-list',
@@ -10,6 +10,7 @@ import {VideoListItem} from '../models/video-list-item';
 export class VideoListComponent implements OnInit {
 
   public videoList: VideoListItem[];
+  public selectedVideo: VideoListItem = null;
   public loaded = false;
 
   constructor(private apiService: ApiService) { }
@@ -21,6 +22,15 @@ export class VideoListComponent implements OnInit {
         this.loaded = true;
       }
     });
+  }
+
+  playVideo(content) {
+    console.log('playing ', content);
+    this.selectedVideo = content;
+  }
+
+  closeVideoPlayer() {
+    this.selectedVideo = null;
   }
 
 }

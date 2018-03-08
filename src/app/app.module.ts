@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoListItemComponent } from './video-list/video-list-item/video-list-item.component';
 import { ApiService } from './api.service';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoListComponent,
-    VideoListItemComponent
+    VideoListItemComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,11 @@
+<app-video-player *ngIf="selectedVideo" [content]="selectedVideo" (closed)="closeVideoPlayer()"></app-video-player>
 <div class="loader" *ngIf = "!loaded">
   <p>Loading...</p>
 </div>
 <div class = "list" *ngIf = "loaded">
   <app-video-list-item
     *ngFor="let item of videoList"
+    (click)="playVideo(item)"
     [content] = 'item'
   >
   </app-video-list-item>
