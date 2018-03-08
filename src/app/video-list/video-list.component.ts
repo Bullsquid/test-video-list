@@ -11,7 +11,10 @@ export class VideoListComponent implements OnInit {
 
   public videoList: VideoListItem[];
   public selectedVideo: VideoListItem = null;
+  public loading = true;
   public loaded = false;
+  public error = false;
+
 
   constructor(private apiService: ApiService) { }
 
@@ -19,8 +22,13 @@ export class VideoListComponent implements OnInit {
     this.apiService.getVideoList().subscribe(data => {
       if (data && data['video'] instanceof Array) {
         this.videoList = data['video'];
+        this.loading = false;
         this.loaded = true;
       }
+    }, err => {
+      console.log('Error while loading video list: ', err);
+      this.loading = false;
+      this.error = true;
     });
   }
 

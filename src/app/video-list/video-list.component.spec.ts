@@ -27,6 +27,8 @@ describe('VideoListComponent', () => {
 
   it('should not display "loading" when list ready');
 
+  it('should display "error" if loading failed');
+
   it('should display "no items found" when there are no items');
 
   it('should display video-list-items when videoList is not empty');

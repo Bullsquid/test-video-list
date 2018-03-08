@@ -1,6 +1,9 @@
 <app-video-player *ngIf="selectedVideo" [content]="selectedVideo" (closed)="closeVideoPlayer()"></app-video-player>
-<div class="loader" *ngIf = "!loaded">
+<div class="loader" *ngIf = "loading">
   <p>Loading...</p>
+</div>
+<div class="error" *ngIf="error">
+  <p>Error!</p>
 </div>
 <div class = "list" *ngIf = "loaded">
   <p *ngIf="videoList.length === 0">No items found</p>
