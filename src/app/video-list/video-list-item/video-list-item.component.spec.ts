@@ -22,4 +22,11 @@ describe('VideoListItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain title');
+
+  it('should contain description');
+
+  it('should contain thumbnail');
+
 });

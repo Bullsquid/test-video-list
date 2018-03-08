@@ -22,4 +22,6 @@ describe('VideoPlayerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit close event when close button clicked');
 });

@@ -3,6 +3,7 @@
   <p>Loading...</p>
 </div>
 <div class = "list" *ngIf = "loaded">
+  <p *ngIf="videoList.length === 0">No items found</p>
   <app-video-list-item
     *ngFor="let item of videoList"
     (click)="playVideo(item)"

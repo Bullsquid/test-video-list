@@ -22,4 +22,16 @@ describe('VideoListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display "loading" while list is not ready');
+
+  it('should not display "loading" when list ready');
+
+  it('should display "no items found" when there are no items');
+
+  it('should display video-list-items when videoList is not empty');
+
+  it('should show video player when clicked on video row');
+
+  it('should hide video player when video player emits "closed" event');
 });
